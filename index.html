@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrei M. Paguio | Full-Stack Web Developer</title>
+    <meta name="description" content="Portfolio of Andrei M. Paguio — licensed Electronics Engineer and Full-Stack Web Developer specializing in responsive websites, RESTful APIs, and robust web applications." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Andrei M. Paguio | Full-Stack Web Developer" />
+    <meta property="og:description" content="Building modern and responsive websites with architectural precision and high-end aesthetics." />
+    <meta property="og:url" content="https://andreipaguio.dev" />
+    <meta property="og:type" content="website" />
+
+    <!-- Preconnect for font performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+<body>
+
+<!-- =============================================
+     Navigation
+     ============================================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-content">
+        <div class="nav-brand">
+            <img
+                src="https://andreipaguio10.github.io/webportfolio/images/logowhite.png"
+                alt="PGY Logo"
+                class="nav-logo"
+                width="64"
+                height="32"
+            />
+        </div>
+
+        <div class="nav-links font-headline">
+            <a class="nav-link active" href="#home">HOME</a>
+            <a class="nav-link" href="#about">ABOUT ME</a>
+            <a class="nav-link" href="#projects">PROJECTS</a>
+            <a class="nav-link" href="#tools">TOOLS</a>
+            <a class="nav-link" href="#contact">CONTACT</a>
+        </div>
+
+        <button
+            class="nav-menu-btn"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-drawer"
+        >
+            <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+        </button>
+    </div>
+</nav>
+
+<main>
+
+<!-- =============================================
+     Hero Section
+     ============================================= -->
+<section class="hero" id="home" aria-labelledby="hero-heading">
+    <div class="hero-bg-blobs" aria-hidden="true">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+    </div>
+    <div class="container-max hero-content">
+        <div class="editorial-grid">
+            <div class="hero-text-container">
+                <p class="hero-subtitle">Full-Stack Web Developer</p>
+                <h1 class="hero-title font-headline" id="hero-heading">
+                    I'M A <br />FULL-STACK <br />
+                    <span class="hero-title-gradient">WEB DEVELOPER</span>
+                </h1>
+                <p class="hero-description">
+                    Building modern &amp; responsive websites with architectural precision and high-end aesthetics. Turning ideas into digital experiences people can actually use and enjoy.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn-primary font-headline" href="#projects" aria-label="View my portfolio projects">
+                        View My Work
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </a>
+                    <a class="btn-secondary font-headline" href="#about">About Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     About Section
+     ============================================= -->
+<section class="about-section" id="about" aria-labelledby="about-heading">
+    <div class="container-max">
+        <div class="editorial-grid">
+
+            <!-- Photo Carousel -->
+            <div class="about-image-wrapper">
+                <div class="about-carousel" aria-label="Photos of Andrei Paguio">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="carousel-slide">
+                            <img
+                                src="https://andreipaguio10.github.io/webportfolio/images/grad.jpg"
+                                alt="Andrei Paguio at graduation"
+                                width="600"
+                                height="750"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="carousel-slide">
+                            <img
+                                src="https://andreipaguio10.github.io/webportfolio/images/picc.jpg"
+                                alt="Andrei Paguio profile photo"
+                                width="600"
+                                height="750"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="carousel-slide">
+                            <img
+                                src="https://andreipaguio10.github.io/webportfolio/images/life.jpg"
+                                alt="Andrei Paguio lifestyle photo"
+                                width="600"
+                                height="750"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Carousel controls -->
+                    <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous photo" type="button">
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+                    </button>
+                    <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next photo" type="button">
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </button>
+
+                    <!-- Dots -->
+                    <div class="carousel-dots" role="tablist" aria-label="Photo navigation">
+                        <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Photo 1" data-index="0" type="button"></button>
+                        <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 2" data-index="1" type="button"></button>
+                        <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Photo 3" data-index="2" type="button"></button>
+                    </div>
+                </div>
+
+                <div class="experience-badge" aria-label="Over 1 year of engineering experience">
+                    <p class="experience-num font-headline">01+</p>
+                    <p class="experience-label">Years of Engineering</p>
+                </div>
+            </div>
+
+            <!-- Bio Text -->
+            <div class="about-text-content">
+                <h2 class="section-title font-headline" id="about-heading">
+                    Hi, I'm<br />Andrei M. Paguio.
+                </h2>
+                <div class="about-paragraphs">
+                    <p>I'm a licensed Electronics Engineer who's really passionate about building websites and turning ideas into something people can actually use and enjoy. I've been working with HTML, CSS, and Bootstrap, and I use Git to keep my projects organized and track my progress as I build.</p>
+                    <p>I enjoy the whole process of web development — from starting with a simple idea to bringing it to life with clean and responsive design. There's something satisfying about seeing a project go from a blank page to a fully working website, and I like focusing on the details that make it look polished and easy to use.</p>
+                    <p>Coming from an engineering background, I approach things in a logical and structured way and I'm comfortable solving problems along the way. Right now, I'm focused on growing my skills and working toward becoming a full-stack developer, always looking to learn more and take on new projects to improve.</p>
+
+                    <div class="philosophy-grid">
+                        <div>
+                            <h3 class="philosophy-title font-headline">Philosophy</h3>
+                            <p class="philosophy-text">Function leads form, but form provides the soul. I build products that work as beautifully as they look.</p>
+                        </div>
+                        <div>
+                            <h3 class="philosophy-title font-headline">Background</h3>
+                            <p class="philosophy-text">Licensed Electronics Engineer applying structured, logical thinking to every web development challenge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cta">
+                    <a class="btn-primary font-headline" href="./Andrei_Paguio_Resume.pdf" target="_blank" aria-label="view my resume">
+                        View My Resume
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     Projects Section
+     ============================================= -->
+<section class="projects-section" id="projects" aria-labelledby="projects-heading">
+    <div class="container-max">
+        <div class="projects-header">
+            <div class="projects-header-text">
+                <p class="section-eyebrow font-headline">Portfolio</p>
+                <h2 class="section-title font-headline" id="projects-heading">Recent Work</h2>
+            </div>
+            <p class="projects-header-desc">A curated collection of digital products — from RESTful API infrastructure to full-stack MERN applications and UI prototypes.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn active font-headline" data-filter="all" type="button">All</button>
+            <button class="filter-btn font-headline" data-filter="api" type="button">API</button>
+            <button class="filter-btn font-headline" data-filter="app" type="button">App</button>
+            <button class="filter-btn font-headline" data-filter="side" type="button">Side Projects</button>
+            <button class="filter-btn font-headline" data-filter="capstone" type="button">Capstone</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+            <!-- Project 1: E-commerce API -->
+            <article class="project-card" data-category="api">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card1.png"
+                        alt="E-commerce API Documentation project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge">Project 1</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">E-commerce API Documentation</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">terminal</span>
+                    </div>
+                    <p class="project-desc">Dynamic E-Commerce Workflow Management featuring dynamic routes for order processing, real-time inventory updates, and secure user authentication. Supports automated order reporting and comprehensive product management. Documented and published publicly using Postman.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Node.js / Express / Postman</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore E-commerce API project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Course Booking API -->
+            <article class="project-card" data-category="api">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card2.png"
+                        alt="Course Booking API Documentation project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge">Project 2</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Course Booking API Documentation</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">database</span>
+                    </div>
+                    <p class="project-desc">RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Node.js / Express / Postman</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Course Booking API project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Course Booking App -->
+            <article class="project-card" data-category="app">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card3.png"
+                        alt="Course Booking App project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge">Project 3</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Course Booking App</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">devices</span>
+                    </div>
+                    <p class="project-desc">A MERN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">MongoDB / Express / React / Node.js</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Course Booking App project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: E-commerce App -->
+            <article class="project-card" data-category="app">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card4.png"
+                        alt="E-commerce App project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge">Project 4</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">E-commerce App</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">storefront</span>
+                    </div>
+                    <p class="project-desc">MERN E-Commerce Platform featuring a dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">MongoDB / Express / React / Node.js</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore E-commerce App project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5: Airline Booking Mockup -->
+            <article class="project-card" data-category="side">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card5.png"
+                        alt="Airline Booking System Mockup project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge side">Side Project</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Airline Booking Mockup</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">flight</span>
+                    </div>
+                    <p class="project-desc">Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation. Focused on user experience and workflow efficiency with a clean, modern interface.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Figma / UI Design</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Airline Booking Mockup project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6: Airline Booking Prototype -->
+            <article class="project-card" data-category="side">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card6.png"
+                        alt="Airline Booking System Prototype project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge side">Side Project</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Airline Booking Prototype</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">travel_explore</span>
+                    </div>
+                    <p class="project-desc">Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment processing, and real-time ticket management with a fully navigable user flow.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Figma / Prototype</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Airline Booking Prototype project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Capstone 1 -->
+            <article class="project-card" data-category="capstone">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card7.png"
+                        alt="Short Courses Capstone 1 project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge capstone">Capstone 1</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Short Courses Capstone</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">school</span>
+                    </div>
+                    <p class="project-desc">A full-stack capstone project integrating modern web technologies to deliver a scalable and user-friendly application. Demonstrates proficiency in backend development, frontend design, and seamless system integration.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Full-Stack / TBA</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Capstone 1 project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Capstone 2 -->
+            <article class="project-card" data-category="capstone">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card7.png"
+                        alt="Short Courses Capstone 2 project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge capstone">Capstone 2</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Short Courses Capstone</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">school</span>
+                    </div>
+                    <p class="project-desc">A full-stack capstone project integrating modern web technologies to deliver a scalable and user-friendly application. Demonstrates proficiency in backend development, frontend design, and seamless system integration.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Full-Stack / TBA</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Capstone 2 project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Capstone 3 -->
+            <article class="project-card" data-category="capstone">
+                <div class="project-image-box">
+                    <img
+                        src="https://andreipaguio10.github.io/webportfolio/images/card7.png"
+                        alt="Short Courses Capstone 3 project"
+                        width="800"
+                        height="450"
+                        loading="lazy"
+                    />
+                    <div class="project-overlay" aria-hidden="true"></div>
+                    <span class="project-badge capstone">Capstone 3</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-top">
+                        <h3 class="project-name font-headline">Short Courses Capstone</h3>
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">school</span>
+                    </div>
+                    <p class="project-desc">A full-stack capstone project integrating modern web technologies to deliver a scalable and user-friendly application. Demonstrates proficiency in backend development, frontend design, and seamless system integration.</p>
+                    <div class="project-footer">
+                        <span class="project-tech">Full-Stack / TBA</span>
+                        <a class="project-link font-headline" href="#" aria-label="Explore Capstone 3 project">
+                            Explore <span class="material-symbols-outlined project-link-icon" aria-hidden="true">north_east</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div><!-- /.projects-grid -->
+    </div>
+</section>
+
+<!-- =============================================
+     Tools Section
+     ============================================= -->
+<section class="tools-section" id="tools" aria-labelledby="tools-heading">
+    <div class="container-max">
+        <div class="editorial-grid">
+            <div class="tools-intro">
+                <p class="section-eyebrow font-headline">My Stack</p>
+                <h2 class="section-title tools-stack-title font-headline" id="tools-heading">TOOLS I USE</h2>
+                <p class="projects-header-desc" style="max-width:18rem; color: var(--on-surface-variant); font-size: 0.875rem; font-weight: 300; line-height: 1.65;">Technical proficiency across the full lifecycle of product development — from hardware prototyping to modern full-stack web engineering.</p>
+            </div>
+
+            <div class="tools-grid-wrapper">
+                <div class="tools-grid" role="list" aria-label="Technology stack">
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/htmll.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">HTML</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/css.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">CSS</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/node.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Node.js</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/express.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Express</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/bootstrap.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Bootstrap</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/git.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Git</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/figma.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Figma</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/python.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Python</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/autocad.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">AutoCAD</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/arduino.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Arduino IDE</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/fritzing.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Fritzing</span>
+                    </div>
+
+                    <div class="tool-item" role="listitem">
+                        <img src="https://andreipaguio10.github.io/webportfolio/images/raspberry.png" alt="" class="tool-img" width="40" height="40" loading="lazy" aria-hidden="true" />
+                        <span class="tool-label font-headline">Raspberry Pi</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     Contact Section
+     ============================================= -->
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-blob" aria-hidden="true"></div>
+    <div class="container-max">
+
+        <div class="contact-inner">
+
+            <!-- Left: Info -->
+            <div class="contact-left">
+                <div>
+                    <p class="section-eyebrow font-headline">Get In Touch</p>
+                    <h2 class="contact-title font-headline" id="contact-heading">LET'S WORK TOGETHER.</h2>
+                    <p class="contact-tagline">Available for full-stack engineering roles and high-impact project collaborations. Let's build something great.</p>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <span class="material-symbols-outlined contact-detail-icon" aria-hidden="true">mail</span>
+                        <div class="contact-detail-content">
+                            <span class="contact-detail-label">Email</span>
+                            <span class="contact-detail-value">
+                                <a href="mailto:andweii@gmail.com">andweii@gmail.com</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <span class="material-symbols-outlined contact-detail-icon" aria-hidden="true">call</span>
+                        <div class="contact-detail-content">
+                            <span class="contact-detail-label">Phone</span>
+                            <span class="contact-detail-value">
+                                <a href="tel:+631234567890">+63 123 456 7890</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <span class="material-symbols-outlined contact-detail-icon" aria-hidden="true">location_on</span>
+                        <div class="contact-detail-content">
+                            <span class="contact-detail-label">Location</span>
+                            <span class="contact-detail-value">Japan, 〒150-0021 Tokyo, Shibuya,<br />Ebisunishi, 1-chōme−7−12 MKTビル 1F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <form class="contact-form" novalidate aria-label="Contact form">
+                <div class="form-group">
+                    <input
+                        class="form-input"
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder=" "
+                        required
+                        autocomplete="name"
+                        aria-required="true"
+                    />
+                    <label class="form-label font-headline" for="name">Full Name</label>
+                </div>
+
+                <div class="form-group">
+                    <input
+                        class="form-input"
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder=" "
+                        required
+                        autocomplete="email"
+                        aria-required="true"
+                    />
+                    <label class="form-label font-headline" for="email">Email Address</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea
+                        class="form-textarea"
+                        id="message"
+                        name="message"
+                        placeholder=" "
+                        required
+                        rows="4"
+                        aria-required="true"
+                    ></textarea>
+                    <label class="form-label font-headline" for="message">Your Message</label>
+                </div>
+
+                <button class="btn-submit font-headline" type="submit">
+                    Send Message
+                    <span class="material-symbols-outlined" aria-hidden="true">send</span>
+                </button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- =============================================
+     Footer
+     ============================================= -->
+<footer class="footer" role="contentinfo">
+    <div class="container-max">
+
+        <div class="footer-top">
+            <img
+                src="https://andreipaguio10.github.io/webportfolio/images/logowhite.png"
+                alt="PGY Logo"
+                class="footer-logo"
+                width="80"
+                height="40"
+                loading="lazy"
+            />
+            <p class="footer-tagline">"PGY, a shortened version of how my surname sounds — like 'Pagyo.'"</p>
+        </div>
+
+        <nav class="footer-socials" aria-label="Social media links">
+            <a class="social-link" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank" aria-label="Facebook profile">
+                <img
+                    src="https://static.vecteezy.com/system/resources/previews/021/495/985/non_2x/facebook-social-media-logo-icon-free-png.png"
+                    alt=""
+                    class="social-icon-img"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    aria-hidden="true"
+                />
+                Facebook
+            </a>
+            <a class="social-link" href="https://github.com/" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/github-icon-2.svg"
+                    alt=""
+                    class="social-icon-img"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    aria-hidden="true"
+                />
+                GitHub
+            </a>
+            <a class="social-link" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank" aria-label="Instagram profile">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt=""
+                    class="social-icon-img"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    aria-hidden="true"
+                />
+                Instagram
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/andrei-paguio-5b30523b1/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn profile">
+                <img
+                    src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg"
+                    alt=""
+                    class="social-icon-img"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    aria-hidden="true"
+                />
+                LinkedIn
+            </a>
+        </nav>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+            <p class="footer-motto font-headline">"DESIGNED TO BE DISTINCT"</p>
+            <p class="copyright">© 2026 All Rights Reserved | Andrei M. Paguio | Full-Stack Web Developer</p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Mobile Drawer -->
+<div
+    class="nav-drawer"
+    id="nav-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Navigation menu"
+    aria-hidden="true"
+>
+    <button class="drawer-close" id="drawer-close" type="button" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+    <div class="drawer-title font-headline">NAVIGATION</div>
+    <nav class="drawer-links" aria-label="Mobile navigation">
+        <a class="drawer-link active font-headline" href="#home">
+            <span class="material-symbols-outlined" aria-hidden="true">home</span> HOME
+        </a>
+        <a class="drawer-link font-headline" href="#about">
+            <span class="material-symbols-outlined" aria-hidden="true">person</span> ABOUT ME
+        </a>
+        <a class="drawer-link font-headline" href="#projects">
+            <span class="material-symbols-outlined" aria-hidden="true">work</span> PROJECTS
+        </a>
+        <a class="drawer-link font-headline" href="#tools">
+            <span class="material-symbols-outlined" aria-hidden="true">construction</span> TOOLS
+        </a>
+        <a class="drawer-link font-headline" href="#contact">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span> CONTACT
+        </a>
+    </nav>
+</div>
+
+<!-- =============================================
+     JavaScript
+     ============================================= -->
+<script>
+(function () {
+    'use strict';
+
+    /* ---- Mobile Drawer ---- */
+    const menuBtn   = document.getElementById('menu-toggle');
+    const drawerCloseBtn = document.getElementById('drawer-close');
+    const drawer    = document.getElementById('nav-drawer');
+
+    function openDrawer() {
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDrawer() {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    menuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        openDrawer();
+    });
+
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+
+    document.querySelectorAll('.drawer-link').forEach(function (link) {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!drawer.contains(e.target) && drawer.classList.contains('open')) {
+            closeDrawer();
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {
+            closeDrawer();
+        }
+    });
+
+    /* ---- Active Nav on Scroll (Intersection Observer) ---- */
+    const navLinks    = document.querySelectorAll('.nav-link, .drawer-link');
+    const sections    = document.querySelectorAll('section[id]');
+
+    const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(function (link) {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(function (s) { sectionObserver.observe(s); });
+
+    /* ---- Photo Carousel ---- */
+    var currentSlide = 0;
+    var totalSlides  = 3;
+    var track        = document.getElementById('carousel-track');
+    var dots         = document.querySelectorAll('.carousel-dot');
+
+    function goToSlide(index) {
+        currentSlide = (index + totalSlides) % totalSlides;
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        dots.forEach(function (dot, i) {
+            dot.classList.toggle('active', i === currentSlide);
+            dot.setAttribute('aria-selected', i === currentSlide ? 'true' : 'false');
+        });
+    }
+
+    document.getElementById('carousel-prev').addEventListener('click', function () {
+        goToSlide(currentSlide - 1);
+    });
+
+    document.getElementById('carousel-next').addEventListener('click', function () {
+        goToSlide(currentSlide + 1);
+    });
+
+    dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+            goToSlide(parseInt(dot.getAttribute('data-index'), 10));
+        });
+    });
+
+    // Auto-advance every 5 seconds
+    var autoplay = setInterval(function () { goToSlide(currentSlide + 1); }, 5000);
+    document.querySelector('.about-carousel').addEventListener('mouseenter', function () {
+        clearInterval(autoplay);
+    });
+
+    /* ---- Project Filter Tabs ---- */
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var filter = btn.getAttribute('data-filter');
+
+            filterBtns.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+
+            projectCards.forEach(function (card) {
+                var cat = card.getAttribute('data-category');
+                if (filter === 'all' || cat === filter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+}());
+</script>
+
+</body>
+</html>
